@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.touch-manipulation {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1025px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+:root {
+  --toast-bg: #374151;
+  --toast-color: #fff;
+  --toast-border: #4B5563;
+  --toast-success-bg: #065F46;
+  --toast-success-color: #D1FAE5;
+  --toast-success-border: #10B981;
+  --toast-error-bg: #7F1D1D;
+  --toast-error-color: #FEE2E2;
+  --toast-error-border: #EF4444;
+  
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border-color: #d1d5db;
+}
+
+html.light {
+  --toast-bg: #f9fafb;
+  --toast-color: #111827;
+  --toast-border: #d1d5db;
+  --toast-success-bg: #ECFDF5;
+  --toast-success-color: #065F46;
+  --toast-success-border: #10B981;
+  --toast-error-bg: #FEF2F2;
+  --toast-error-color: #7F1D1D;
+  --toast-error-border: #EF4444;
+  
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border-color: #d1d5db;
+}
+
+html.dark {
+  --toast-bg: #374151;
+  --toast-color: #fff;
+  --toast-border: #4B5563;
+  --toast-success-bg: #065F46;
+  --toast-success-color: #D1FAE5;
+  --toast-success-border: #10B981;
+  --toast-error-bg: #7F1D1D;
+  --toast-error-color: #FEE2E2;
+  --toast-error-border: #EF4444;
+  
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --border-color: #374151;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+
+img, svg, [style*="background-image"], [style*="backgroundImage"] {
+  -webkit-user-drag: none !important;
+  -khtml-user-drag: none !important;
+  -moz-user-drag: none !important;
+  -o-user-drag: none !important;
+  user-drag: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  pointer-events: auto;
+}
+
+img {
+  -webkit-touch-callout: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-user-drag: none !important;
+  user-drag: none !important;
+}
+
+svg {
+  -webkit-touch-callout: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-user-drag: none !important;
+  user-drag: none !important;
+}
+
+* {
+  -webkit-touch-callout: none;
+}
+
+img::selection, svg::selection {
+  background: transparent !important;
+}
+
+img::-moz-selection, svg::-moz-selection {
+  background: transparent !important;
+}
+
+[style*="background-image"]::selection,
+[style*="backgroundImage"]::selection {
+  background: transparent !important;
+}
+
+[style*="background-image"]::-moz-selection,
+[style*="backgroundImage"]::-moz-selection {
+  background: transparent !important;
+}
